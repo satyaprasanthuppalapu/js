@@ -1,0 +1,483 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "Variables"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// \"declaration\" means creating a variable without assigning a value to it.\r\nvar a;\r\n// \"assignment\" means giving a value to a declared variable.\r\na = 10;\r\n// \"Reassignment\" refers to changing the value of an already declared variable.\r\na = 20;\r\n// \"redeclaration\" means declaring a variable with the same name again and its overiding the previous value.\r\nvar a = 30; \r\n// \"declaration\" + \"assignment\" = \"initialization\", while \"initialization\" means creating a variable and assigning a value to it at the same time.\r\nvar b = 5;\r\n// \"redeclaration\" means declaring a variable with the same name again in the same scope,it allowed in JavaScript, but it can lead to confusion and bugs, so it's generally recommended to avoid it.\r\nvar b = 15;\r\n//output printing\r\nconsole.log(a, b);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "20 15",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// types variables declaration\r\nvar y; // This will not throw an error because 'var' variables \"can\" be declared without initialization.\r\n\r\n\r\nlet x; // This will not throw an error because 'let' variables \"can\" be declared without initialization.\r\n\r\n\r\nconst z = 30; // This will throw an error because 'const' variables must be initialized at the time of declaration. and const \"cannot\" be declared without initialization.\r\n\r\n\r\n// \"***assignment***\"\r\nvar y = 100; //var variables \"****can be reassigned and redeclared.****\"\r\n\r\nx = 50; //let variables \"****can be reassigned but not redeclared.****\"\r\n\r\n// \"**const z = 40;**\"\" // This will throw an error because 'const' variables cannot be reassigned.\"****const z= 30 must me initialized at the time of declaration.and once initialized, cannot be changed.****\"\r\n\r\n\r\nconsole.log(y, x, z);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "100 50 30",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "//if  checks condition and executes the block of code if the condition is true. In this case, the condition is always true, because of \"true is keyword\",so the block of code will always execute.\r\nif (true) {\r\n\r\n    var k = 1;\r\n\r\n    let i = 2;\r\n\r\n    const t = 3;\r\n}\r\n\r\nconsole.log(k); // works\r\n\r\nconsole.log(i); // error\r\n\r\nconsole.log(t); // error"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "1",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.error",
+                            "value": {
+                                "name": "ReferenceError",
+                                "message": "i is not defined",
+                                "stack": "    at <Cell 3> [12, 13]\n    at <Cell 3> [11, 46]\n    at Script.runInContext (node:vm:149:12)\n    at Script.runInNewContext (node:vm:154:17)\n    at Object.runInNewContext (node:vm:310:38)\n    at C (c:\\Users\\satya\\.vscode\\extensions\\donjayamanne.typescript-notebook-2.0.6\\out\\extension\\server\\index.js:2:113345)\n    at t.execCode (c:\\Users\\satya\\.vscode\\extensions\\donjayamanne.typescript-notebook-2.0.6\\out\\extension\\server\\index.js:2:114312)\n    at k.<anonymous> (c:\\Users\\satya\\.vscode\\extensions\\donjayamanne.typescript-notebook-2.0.6\\out\\extension\\server\\index.js:2:142156)\n    at k.emit (node:events:524:28)\n    at k.emit (node:domain:489:12)"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "//if  checks condition and executes the block of code if the condition is true. In this case, the condition is always true, because of \"true is keyword\",so the block of code will always execute.\r\nif (true) {\r\n\r\n    var k = 1;\r\n\r\n    let i = 2;\r\n\r\n    const t = 3;\r\n    \r\n    console.log(\"var value 'printing works every where':  \" + k); // works\r\n    console.log(\"let value 'printing from inside the block':  \" + i); // works\r\n    console.log(\"const value 'printing from inside the block':  \" + t); // works\r\n}\r\n\r\nconsole.log(\"var value 'printing from '**outside**' the block':\" + k); // works\r\n\r\nconsole.log(\"let value 'printing from outside the block':\" + i); // error\r\n\r\nconsole.log(\"const value 'printing from outside the block':\" + t); // error"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "var value 'printing works every where':  1",
+                                "let value 'printing from inside the block':  2",
+                                "const value 'printing from inside the block':  3",
+                                "var value 'printing from '**outside**' the block':1",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.error",
+                            "value": {
+                                "name": "ReferenceError",
+                                "message": "i is not defined",
+                                "stack": "    at <Cell 4> [17, 62]\n    at <Cell 4> [14, 46]\n    at Script.runInContext (node:vm:149:12)\n    at Script.runInNewContext (node:vm:154:17)\n    at Object.runInNewContext (node:vm:310:38)\n    at C (c:\\Users\\satya\\.vscode\\extensions\\donjayamanne.typescript-notebook-2.0.6\\out\\extension\\server\\index.js:2:113345)\n    at t.execCode (c:\\Users\\satya\\.vscode\\extensions\\donjayamanne.typescript-notebook-2.0.6\\out\\extension\\server\\index.js:2:114312)\n    at k.<anonymous> (c:\\Users\\satya\\.vscode\\extensions\\donjayamanne.typescript-notebook-2.0.6\\out\\extension\\server\\index.js:2:142156)\n    at k.emit (node:events:524:28)\n    at k.emit (node:domain:489:12)"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "Datatypes"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "🤔 \"In JavaScript, you don't need to specify a data type when declaring a variable. JavaScript automatically determines the data type based on the value assigned. Variable name and data type are not the same thing.\""
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let age = 19;                    // Number (8 bytes)\r\n\r\nlet name = \"Prasanth\";           // String (2 bytes/char)\r\n\r\nlet isStudent = true;            // Boolean (1 byte)\r\n\r\nlet city;                        // Undefined (no value)\r\n\r\nlet marks = null;                // Null (empty value)\r\n\r\nlet id = 1234567890123456789n;   // BigInt (variable size)\r\n\r\nlet uniqueId = Symbol(\"id\");     // Symbol (unique value)\r\n\r\nconsole.log(age);\r\nconsole.log(name);\r\nconsole.log(isStudent);\r\nconsole.log(city);\r\nconsole.log(marks);\r\nconsole.log(id);\r\nconsole.log(uniqueId);"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "Operators"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "⭐ Learn First (Used in Most Programs)\r\nArithmetic Operators\r\n(+ , - , * , / , % , **)\r\n\r\nAssignment Operators\r\n(= , += , -= , *= , /= , %= , **=)\r\n\r\nComparison Operators\r\n(== , === , != , !== , > , < , >= , <=)\r\n\r\nLogical Operators\r\n(&& , || , !)\r\n\r\nIncrement/Decrement Operators\r\n(++ , --)\r\n\r\nTernary Operator\r\n(?:)\r\n\r\nType Operator\r\n(typeof)\r\n\r\n\r\n🔥 Learn Next (Commonly Used)\r\nString Operators\r\n(+ , +=)\r\n\r\nNullish Coalescing Operator\r\n(??)\r\n\r\nOptional Chaining Operator\r\n(?.)\r\n\r\nSpread Operator\r\n(...)\r\n\r\nRest Operator\r\n(...)\r\n\r\nDestructuring Assignment\r\n([ ] , { })\r\n\r\nin Operator\r\n(in)\r\n\r\nnew Operator\r\n(new)\r\n\r\n\r\n\r\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let a = 10;\r\nlet b = 5;\r\n\r\nconsole.log(a + b);  // 10 + 5 = 15\r\nconsole.log(a - b);  // 10 - 5 = 5\r\nconsole.log(a * b);  // 10 * 5 = 50\r\nconsole.log(a / b);  // 10 / 5 = 2\r\nconsole.log(a % b);  // 10 % 5 = 0\r\nconsole.log(a ** b); // 10^5 = 10x10x10x10x10 = 100000"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "15",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let x = 10;\r\n\r\nx += 5;  // x = 10 + 5\r\nconsole.log(x); // 15\r\n\r\nx -= 3;  // x = 15 - 3, x value is overridden by new value from previous line x=+5 so x=15 in this line\r\nconsole.log(x); // 12\r\n\r\nx *= 2;  // x = 12 * 2 , x value is overridden by new value from previous line x=-3 so x=12 in this line\r\nconsole.log(x); // 24\r\n\r\nx /= 4;  // x = 24 / 4\r\nconsole.log(x); // 6"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "15",
+                                "12",
+                                "24",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "console.log(10 == \"10\");   // 10 equals 10 → true only checks for value not type, so it converts string \"10\" to number 10 and then compares, so true.\r\nconsole.log('Type of \"10\": ' + typeof \"10\");  // \"string\"\r\nconsole.log('Type of 10: ' + typeof 10);   // \"number\"\r\nconsole.log(10 === \"10\");  // small logic between == and ====, === checks for both value and type not only value like \"**10 === 10 → true**\"  but false if type is different like \"**10 === \"10\" → false**\".tip use === for comparison to avoid unexpected type coercion.\r\nconsole.log(10 != 5);      // 10 not equal 5 → true\r\nconsole.log(10 > 5);       // 10 greater than 5 → true\r\nconsole.log(10 < 5);       // 10 less than 5 → false\r\nconsole.log(10 >= 10);     // equal allowed → true\r\nconsole.log(10 <= 5);      // false"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "true",
+                                "Type of \"10\": string",
+                                "Type of 10: number",
+                                "false",
+                                "true",
+                                "true",
+                                "false",
+                                "true",
+                                "false",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "console.log(true && true);    // true AND true = true\r\nconsole.log(true && false);   // true AND false = false\r\n\r\nconsole.log(true || false);   // one true exists = true\r\nconsole.log(false || false);  // no true = false\r\n\r\nconsole.log(!true);           // opposite of true = false"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "true",
+                                "false",
+                                "true",
+                                "false",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let n = 10;\r\n\r\nn++; // n = 10 + 1\r\nconsole.log(n); // 11\r\n\r\nn--; // n = 11 - 1\r\nconsole.log(n); // 10"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "11",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "console.log(typeof 100);      // \"number\"\r\nconsole.log(typeof \"Hello\");  // \"string\"\r\nconsole.log(typeof true);     // \"boolean\""
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "number",
+                                "string",
+                                "boolean",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let age = 18;\r\nif (age >= 18) {\r\n    console.log(\"Adult\");\r\n} else {\r\n    console.log(\"Minor\");\r\n}"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "//firstuu normal if else neruchuko appudu chudu edhi \r\nlet age = 18;\r\nlet result = age >= 18 ? \"Adult\" : \"Minor\";//this line is a shorthand versioin of if-else statement, it checks if age is greater than or equal to 18, if true it assigns \"Adult\" to result, otherwise it assigns \"Minor\".\r\nconsole.log(result); // \"Adult\"\r\n//if (age >= 18)\r\n//    result = \"Adult\";\r\n//else\r\n//    result = \"Minor\";\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Adult",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let first = \"Hello\";\r\nlet last = \"World\";\r\n\r\nconsole.log(first + \" \" + last);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Hello World",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let name = null;\r\nconsole.log(name ?? \"Guest\");\r\n//name is null\r\n//therefore use \"Guest\"\r\nlet name = \"kittu\";\r\nconsole.log(name ?? \"Guest\");"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "null",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "1. Arithmetic Operators\r\n2. Assignment Operators\r\n3. Comparison Operators\r\n4. Logical Operators\r\n5. Increment/Decrement Operators\r\n6. Ternary Operator\r\n7. typeof Operator\r\n8. String Operators\r\n9. Nullish Coalescing (??)\r\n10. Optional Chaining (?.)\r\n11. Spread (...)\r\n12. Rest (...)\r\n13. Destructuring\r\n14. in\r\n15. new\r\n16. Bitwise\r\n17. instanceof\r\n18. delete\r\n19. void\r\n20. Comma\r\n🥲first complete 1-9 then learn 10-20 \r\n10-20 good to learn later 🥱if have to much dulla learn own"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "if-else\r\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "😘\r\nTypes  in if else\r\nif\tCheck one condition\r\nif...else\tTrue or False choice\r\nelse if\tMultiple choices\r\nnested if\tCondition inside condition\r\n?:\tShort one-line if-else"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let age=18;\r\nif (age >= 18) {\r\n    console.log(\"Adult\");\r\n}"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Adult",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let age = 18;\r\nif (age >= 18) {\r\n    console.log(\"Adult\");\r\n} else {\r\n    console.log(\"Minor\");\r\n}"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Adult",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let marks = 85;\r\nif (marks >= 90) {\r\n    console.log(\"A\");\r\n} else if (marks >= 75) {\r\n    console.log(\"B\");\r\n} else {\r\n    console.log(\"C\");\r\n}"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "B",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "\r\nlet age = 20;\r\nlet hasLicense = true;\r\nif (age >= 18) {\r\n    if (hasLicense) {\r\n        console.log(\"Can drive\");\r\n    }\r\n}"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Can drive",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let age = 18;\r\nlet result = age >= 18 ? \"Adult\" : \"Minor\";\r\nconsole.log(result);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Adult",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        }
+    ]
+}
