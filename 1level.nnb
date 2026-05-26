@@ -314,7 +314,7 @@
         {
             "language": "javascript",
             "source": [
-                "let first = \"Hello\";\r\nlet last = \"World\";\r\n\r\nconsole.log(first + \" \" + last);"
+                "let first = \"Hello\";\r\nlet last = \"World\";\r\n\r\nconsole.log(first + \" \" + last);\r\nlet name=\"satya\";\r\nname = name+\"prasanth\";\r\nconsole.log(name);"
             ],
             "outputs": [
                 {
