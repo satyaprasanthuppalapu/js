@@ -1,0 +1,11 @@
+{
+    "cells": [
+        {
+            "language": "javascript",
+            "source": [
+                "for (let i = 0; i < 5; i++) {\r\n    console.log(`Iteration ${i}`);\r\n}"
+            ],
+            "outputs": []
+        }
+    ]
+}
