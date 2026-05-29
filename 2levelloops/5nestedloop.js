@@ -1,4 +1,4 @@
-//nested loops
+//nested loops 
 for (let row = 1; row <= 3; row++) {
     console.log(`outside loop ${row} {`);
     for (let col = 1; col <= 2; col++) {

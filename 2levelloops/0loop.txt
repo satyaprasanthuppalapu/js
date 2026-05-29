@@ -1,0 +1,75 @@
+LOOPS IN JAVASCRIPT
+====================
+
+WHAT IS A LOOP?
+A loop is a programming construct that repeats a block of code multiple times based on a condition.
+Loops help avoid writing redundant code and make programs more efficient.
+
+WHY USE LOOPS?
+- Eliminate repetitive code
+- Process collections of data (arrays, objects)
+- Execute code a specific number of times
+- Iterate until a condition is met
+
+TYPES OF LOOPS
+==============
+
+1. FOR LOOP
+   - Executes code a specific number of times
+   - Syntax: for (initialization; condition; increment/decrement)
+   - Example:
+     for (let i = 0; i < 5; i++) {
+       console.log(i);  // Outputs: 0, 1, 2, 3, 4
+     }
+
+2. WHILE LOOP
+   - Repeats as long as a condition is true
+   - Syntax: while (condition) { code }
+   - Example:
+     let i = 0;
+     while (i < 5) {
+       console.log(i);  // Outputs: 0, 1, 2, 3, 4
+       i++;
+     }
+
+3. DO...WHILE LOOP
+   - Executes at least once, then repeats if condition is true
+   - Syntax: do { code } while (condition);
+   - Example:
+     let i = 0;
+     do {
+       console.log(i);  // Outputs: 0, 1, 2, 3, 4
+       i++;
+     } while (i < 5);
+
+4. FOR...IN LOOP
+   - Iterates over object properties
+   - Syntax: for (let key in object)
+   - Example:
+     let person = {name: "John", age: 30, city: "NYC"};
+     for (let key in person) {
+       console.log(key + ": " + person[key]);
+     }
+
+5. FOR...OF LOOP
+   - Iterates over array values (ES6)
+   - Syntax: for (let value of array)
+   - Example:
+     let fruits = ["apple", "banana", "orange"];
+     for (let fruit of fruits) {
+       console.log(fruit);  // Outputs: apple, banana, orange
+     }
+
+6. FOREACH METHOD
+   - Built-in array method that executes function for each element
+   - Syntax: array.forEach(function(element, index, array))
+   - Example:
+     let numbers = [1, 2, 3, 4, 5];
+     numbers.forEach(function(num) {
+       console.log(num);  // Outputs: 1, 2, 3, 4, 5
+     });
+
+LOOP CONTROL STATEMENTS
+=======================
+- BREAK: Exits the loop immediately
+- CONTINUE: Skips current iteration and goes to next one

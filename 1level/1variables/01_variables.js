@@ -1,4 +1,7 @@
-// "declaration" means creating a variable without assigning a value to it.
+//alt+z for word wrap in vscode
+
+//first install node.js and run node version command "node --version" in terminal to check if it's installed or not
+//"declaration" means creating a variable without assigning a value to it.
 var a;
 // "assignment" means giving a value to a declared variable.
 a = 10;

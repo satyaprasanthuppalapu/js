@@ -1,0 +1,22 @@
+
+JS Practice Folder
+
+This folder holds ordered JavaScript learning materials and practice code. Content is organized by levels so you can learn topics from basic to advanced in a clear, structured way.
+
+Typical contents and organization:
+
+- levels/ or projects/: exercises and small apps grouped by level (basic → intermediate → advanced).
+
+Guidelines:
+
+- Learn in order: follow the level numbering to build fundamentals before moving to advanced topics.
+- Keep examples minimal and focused on a single concept.
+- Use clear filenames and a consistent folder structure for easy navigation.
+- Practice by modifying examples and building small variations.
+- Commit frequently with short messages to track progress.
+
+Purpose:
+
+Provide a simple, level-based path for hands-on practice and steady progression from JavaScript basics to advanced topics.
+
+

@@ -1,3 +1,4 @@
+//character count in string
 let str = "hi world";
 for (let i = 0; i < str.length; i++) {
     console.log(str[i]+" is at index "+i);
