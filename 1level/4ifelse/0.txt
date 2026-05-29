@@ -1,0 +1,7 @@
+😘
+Types  in if else
+if	Check one condition
+if...else	True or False choice
+else if	Multiple choices
+nested if	Condition inside condition
+?:	Short one-line if-else

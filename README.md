@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-# js-practice
-this repo as js practice and learning files 
-=======
-# js
->>>>>>> 88ff7ca4abd7d65e010f9bf2e70f84c529537efd
+this repo contains js pratice files
+first install node js in your system for run this file in local
+node -v
+git  clone url 
+git pull origin main,for latest js file updates|

@@ -1,0 +1,71 @@
+⭐ Learn First (Used in Most Programs)
+Arithmetic Operators
+(+ , - , * , / , % , **)
+
+Assignment Operators
+(= , += , -= , *= , /= , %= , **=)
+
+Comparison Operators
+(== , === , != , !== , > , < , >= , <=)
+
+Logical Operators
+(&& , || , !)
+
+Increment/Decrement Operators
+(++ , --)
+
+Ternary Operator
+(?:)
+
+Type Operator
+(typeof)
+
+
+🔥 Learn Next (Commonly Used)
+String Operators
+(+ , +=)
+
+Nullish Coalescing Operator
+(??)
+
+Optional Chaining Operator
+(?.)
+
+Spread Operator
+(...)
+
+Rest Operator
+(...)
+
+Destructuring Assignment
+([ ] , { })
+
+in Operator
+(in)
+
+new Operator
+(new)
+
+
+1. Arithmetic Operators
+2. Assignment Operators
+3. Comparison Operators
+4. Logical Operators
+5. Increment/Decrement Operators
+6. Ternary Operator
+7. typeof Operator
+8. String Operators
+9. Nullish Coalescing (??)
+10. Optional Chaining (?.)
+11. Spread (...)
+12. Rest (...)
+13. Destructuring
+14. in
+15. new
+16. Bitwise
+17. instanceof
+18. delete
+19. void
+20. Comma
+🥲first complete 1-9 then learn 10-20 
+10-20 good to learn later 🥱if have to much dulla learn own

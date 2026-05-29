@@ -1,3 +1,5 @@
+//data types in JavaScript
+//in js no need to specify the data type of a variable, js is a dynamically typed language, it automatically determines the data type based on the value assigned to the variable. Here are some common data types in JavaScript:
 let age = 19;                    // Number (8 bytes)
 
 let name = "Prasanth";           // String (2 bytes/char)
